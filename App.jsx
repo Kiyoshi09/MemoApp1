@@ -9,13 +9,21 @@ import MemoCreateScreen from './src/screens/MemoCreateScreen';
 import LogInScreen from './src/screens/LogInScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 
+import firebase from 'firebase';
+import { firebaseConfig } from './env';
+
+// firebase オブジェクトの初期化
+if(firebase.apps.length === 0){
+  firebase.initializeApp(firebaseConfig);
+}
+
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-        initialRouteName="LogIn"
+        initialRouteName="SignUp"
         screenOptions={
           {
             headerStyle: { backgroundColor: '#467FD3' },
