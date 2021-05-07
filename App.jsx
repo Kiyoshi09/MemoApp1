@@ -12,6 +12,8 @@ import SignUpScreen from './src/screens/SignUpScreen';
 import firebase from 'firebase';
 import { firebaseConfig } from './env';
 
+require('firebase/firestore');
+
 // firebase オブジェクトの初期化
 if(firebase.apps.length === 0){
   firebase.initializeApp(firebaseConfig);
