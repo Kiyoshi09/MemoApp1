@@ -48,7 +48,7 @@ export default function MemoDetailScreen(props) {
           {memo && memo.bodyText}
         </Text>
       </ScrollView>
-      <CircleButton style={{ top: 60, bottom: 'auto' }} name="edit-2" onPress={() => { navigation.navigate('MemoEdit'); }} />
+      <CircleButton style={{ top: 60, bottom: 'auto' }} name="edit-2" onPress={() => { navigation.navigate('MemoEdit', { id: memo.id, bodyText: memo.bodyText }); }} />
     </View>
   );
 }
